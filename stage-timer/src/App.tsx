@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef, createContext, useContext } from 'react'
-import { Play, Pause, Square, RotateCcw, Settings, Maximize, Volume2, Clock, Timer as TimerIcon, StopCircle } from 'lucide-react'
+import { Play, Pause, Square, RotateCcw, Settings, Maximize, Volume2, Clock, Timer as TimerIcon, StopCircle, Moon, Sun } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -27,6 +27,8 @@ interface TimerContextType {
   updateTimer: (config: TimerConfig) => void
   activeTimerId: string
   setActiveTimerId: (id: string) => void
+  isDarkMode: boolean
+  toggleDarkMode: () => void
 }
 
 const TimerContext = createContext<TimerContextType | null>(null)
@@ -137,7 +139,7 @@ const createAudioContext = () => {
 }
 
 const Timer: React.FC<{ config: TimerConfig }> = ({ config }) => {
-  const { updateTimer } = useTimerContext()
+  const { updateTimer, isDarkMode, toggleDarkMode } = useTimerContext()
   const { time, isRunning, start, pause, reset, stop } = useTimer()
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [clockTime, setClockTime] = useState(getCurrentTimeOfDay())
@@ -279,6 +281,16 @@ const Timer: React.FC<{ config: TimerConfig }> = ({ config }) => {
           {config.name}
         </CardTitle>
         <div className="flex gap-2">
+          <Button 
+            variant="outline" 
+            size="icon" 
+            onClick={toggleDarkMode}
+            title={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+            className="relative"
+          >
+            {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            <span className="sr-only">{isDarkMode ? "Switch to light mode" : "Switch to dark mode"}</span>
+          </Button>
           <Dialog open={settingsOpen} onOpenChange={setSettingsOpen}>
             <DialogTrigger asChild>
               <Button variant="outline" size="icon">
@@ -447,6 +459,18 @@ const TimerProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =>
   ])
 
   const [activeTimerId, setActiveTimerId] = useState(timers[0].id)
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedDarkMode = localStorage.getItem('stage-timer-dark-mode')
+    const initialDarkMode = savedDarkMode !== null ? JSON.parse(savedDarkMode) : false
+    
+    if (initialDarkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    
+    return initialDarkMode
+  })
 
   useEffect(() => {
     const savedTimers = localStorage.getItem('stage-timer-configs')
@@ -464,14 +488,27 @@ const TimerProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     localStorage.setItem('stage-timer-configs', JSON.stringify(timers))
   }, [timers])
 
+  useEffect(() => {
+    localStorage.setItem('stage-timer-dark-mode', JSON.stringify(isDarkMode))
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [isDarkMode])
+
   const updateTimer = useCallback((updatedConfig: TimerConfig) => {
     setTimers(prev => prev.map(timer => 
       timer.id === updatedConfig.id ? updatedConfig : timer
     ))
   }, [])
 
+  const toggleDarkMode = useCallback(() => {
+    setIsDarkMode((prev: boolean) => !prev)
+  }, [])
+
   return (
-    <TimerContext.Provider value={{ timers, updateTimer, activeTimerId, setActiveTimerId }}>
+    <TimerContext.Provider value={{ timers, updateTimer, activeTimerId, setActiveTimerId, isDarkMode, toggleDarkMode }}>
       {children}
     </TimerContext.Provider>
   )
