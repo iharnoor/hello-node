@@ -2,7 +2,15 @@
 
 A complete stage timer web application similar to StageTimer.io, built with React TypeScript and Tailwind CSS. Perfect for presentations, events, and professional timing needs.
 
-![Stage Timer Screenshot](https://app.devin.ai/attachments/880f4163-ebc3-42be-b195-4f567f4e5550/localhost_5173_161318.png)
+![Stage Timer Dark Mode](https://app.devin.ai/attachments/880f4163-ebc3-42be-b195-4f567f4e5550/localhost_5173_161318.png)
+
+## 🎨 Theme Showcase
+
+### Dark Theme (Perfect for Low-Light Environments)
+![Dark Mode Countdown Timer](/home/ubuntu/screenshots/localhost_5173_164910.png)
+
+### Light Theme (Ideal for Bright Presentations)
+![Light Mode Time Display](/home/ubuntu/screenshots/localhost_5173_164947.png)
 
 ## ✨ Features
 
@@ -66,42 +74,122 @@ npm run build
 npm run preview
 ```
 
-## 📖 Usage Examples
+## 📖 Usage Examples & Visual Guide
 
-### Basic Countdown Timer
-1. Select "Countdown Timer" tab
-2. Click Settings ⚙️ to set duration (default: 5:00)
-3. Press **Start** or **Spacebar** to begin
-4. Timer counts down with visual progress bar
-5. Audio notification plays when complete
+### 🕐 Timer Types Comparison
 
-![Countdown Timer](https://app.devin.ai/attachments/f3fba315-3156-44f8-bbb8-af01ad24e8e3/localhost_5173_161413.png)
+#### Countdown Timer (Perfect for Timed Presentations)
+Set a specific duration and watch it count down to zero with visual progress indication.
 
-### Presentation Timing
-1. Switch to "Countup Timer" for open-ended presentations
-2. Enable fullscreen mode 🔲 for clean display
-3. Use keyboard shortcuts for hands-free control
-4. Toggle hundredths precision for precise timing
+![Dark Mode Countdown Timer](/home/ubuntu/screenshots/localhost_5173_164910.png)
 
-![Countup Timer](https://app.devin.ai/attachments/3cd8e2d6-4ab5-467f-a032-8f84e4c01397/localhost_5173_161350.png)
+**Use Cases:**
+- Conference presentations with strict time limits
+- Workshop sessions and breakout activities
+- Exam timing and test administration
+- Meeting time management
 
-### Settings & Customization
-- **Show Hundredths**: Toggle .XX precision display
-- **Audio Notifications**: Enable/disable completion sounds  
-- **Volume Control**: Adjust notification volume
-- **Dark Theme**: Switch themes for different environments
+#### Countup Timer (Ideal for Open-Ended Sessions)
+Start from zero and count up indefinitely - perfect when you need to track elapsed time.
 
-![Settings Dialog](https://app.devin.ai/attachments/2c7ac3d2-8650-415c-b31f-3de6e18ef075/localhost_5173_161425.png)
+![Dark Mode Countup Timer](/home/ubuntu/screenshots/localhost_5173_164922.png)
 
-## ⌨️ Keyboard Shortcuts
+**Use Cases:**
+- Q&A sessions and open discussions
+- Creative workshops and brainstorming
+- Performance timing and rehearsals
+- General time tracking
 
-| Key | Action |
-|-----|--------|
-| **Space** | Start/Pause timer |
-| **R** | Reset timer to initial state |
-| **ESC** | Stop timer or exit fullscreen |
+#### Time of Day Clock (Current Time Display)
+Display the current time in a clean, readable format for audience reference.
 
-All shortcuts work globally and are optimized for presentation use.
+![Dark Mode Time of Day](/home/ubuntu/screenshots/localhost_5173_164934.png)
+
+**Use Cases:**
+- Event schedules and time announcements
+- Live streaming and broadcasts
+- Conference room displays
+- Public information screens
+
+### 🎯 Step-by-Step Usage Guide
+
+#### Setting Up a Countdown Timer
+1. **Select Timer Type**: Click on "Countdown Timer" tab
+2. **Configure Duration**: Click Settings ⚙️ to set your desired time (default: 5:00)
+3. **Start Timer**: Press **Start** button or hit **Spacebar**
+4. **Monitor Progress**: Watch the visual progress bar and time display
+5. **Audio Alert**: Receive notification when timer reaches zero
+
+#### Customizing Your Experience
+Access the settings dialog to personalize your timer experience:
+
+![Settings Dialog Light Mode](/home/ubuntu/screenshots/localhost_5173_165000.png)
+
+**Available Options:**
+- **Show Hundredths**: Toggle .XX precision for precise timing
+- **Audio Notifications**: Enable/disable completion sound alerts
+- **Theme Toggle**: Switch between dark and light modes instantly
+
+### 🎨 Theme Switching in Action
+
+**Dark Mode** - Perfect for low-light environments, stage presentations, and reducing eye strain:
+![Dark Mode Interface](/home/ubuntu/screenshots/localhost_5173_164910.png)
+
+**Light Mode** - Ideal for bright rooms, projector displays, and high-contrast needs:
+![Light Mode Interface](/home/ubuntu/screenshots/localhost_5173_164947.png)
+
+### 🚀 Real-World Scenarios
+
+#### Conference Presentation Setup
+```
+1. Choose Countdown Timer (15:00 for keynote)
+2. Enable Dark Mode for stage lighting
+3. Use Fullscreen mode for clean display
+4. Rely on Spacebar for hands-free control
+```
+
+#### Workshop Facilitation
+```
+1. Start with Countup Timer for introductions
+2. Switch to Countdown for timed activities
+3. Use Time of Day for schedule reference
+4. Toggle audio alerts based on room size
+```
+
+#### Live Event Management
+```
+1. Set multiple countdown timers for segments
+2. Use light mode for bright venue lighting
+3. Enable hundredths for precise timing
+4. Utilize keyboard shortcuts for quick control
+```
+
+## ⌨️ Keyboard Shortcuts & Controls
+
+| Key | Action | Visual Indicator |
+|-----|--------|------------------|
+| **Space** | Start/Pause timer | ▶️ Play/⏸️ Pause button highlights |
+| **R** | Reset timer to initial state | 🔄 Reset button highlights |
+| **ESC** | Stop timer or exit fullscreen | ⏹️ Stop button highlights |
+
+All shortcuts work globally and are optimized for presentation use. Visual feedback confirms each action.
+
+### 🎮 Control Tips & Best Practices
+
+#### For Presentations
+- **Spacebar**: Most important control - practice using it without looking
+- **ESC**: Quick exit from fullscreen when needed
+- **R**: Reset between presentation segments
+
+#### For Live Events
+- **Pre-configure**: Set up timers before the event starts
+- **Test Audio**: Verify notification sounds work in your environment
+- **Backup Plan**: Know manual controls in case of technical issues
+
+#### For Workshops
+- **Visual Cues**: Use progress bars to show remaining time
+- **Audio Alerts**: Enable for background timing during activities
+- **Theme Choice**: Match room lighting conditions
 
 ## 🎨 Accessibility Features
 
