@@ -7,10 +7,10 @@ A complete stage timer web application similar to StageTimer.io, built with Reac
 ## 🎨 Theme Showcase
 
 ### Dark Theme (Perfect for Low-Light Environments)
-![Dark Mode Countdown Timer](/home/ubuntu/screenshots/localhost_5173_164910.png)
+![Dark Mode Countdown Timer](screenshots/dark-mode-countdown.png)
 
 ### Light Theme (Ideal for Bright Presentations)
-![Light Mode Time Display](/home/ubuntu/screenshots/localhost_5173_164947.png)
+![Light Mode Time Display](screenshots/light-mode-time-of-day.png)
 
 ## ✨ Features
 
@@ -81,7 +81,7 @@ npm run preview
 #### Countdown Timer (Perfect for Timed Presentations)
 Set a specific duration and watch it count down to zero with visual progress indication.
 
-![Dark Mode Countdown Timer](/home/ubuntu/screenshots/localhost_5173_164910.png)
+![Dark Mode Countdown Timer](screenshots/dark-mode-countdown.png)
 
 **Use Cases:**
 - Conference presentations with strict time limits
@@ -92,7 +92,7 @@ Set a specific duration and watch it count down to zero with visual progress ind
 #### Countup Timer (Ideal for Open-Ended Sessions)
 Start from zero and count up indefinitely - perfect when you need to track elapsed time.
 
-![Dark Mode Countup Timer](/home/ubuntu/screenshots/localhost_5173_164922.png)
+![Dark Mode Countup Timer](screenshots/dark-mode-countup.png)
 
 **Use Cases:**
 - Q&A sessions and open discussions
@@ -103,7 +103,7 @@ Start from zero and count up indefinitely - perfect when you need to track elaps
 #### Time of Day Clock (Current Time Display)
 Display the current time in a clean, readable format for audience reference.
 
-![Dark Mode Time of Day](/home/ubuntu/screenshots/localhost_5173_164934.png)
+![Dark Mode Time of Day](screenshots/dark-mode-time-of-day.png)
 
 **Use Cases:**
 - Event schedules and time announcements
@@ -123,7 +123,7 @@ Display the current time in a clean, readable format for audience reference.
 #### Customizing Your Experience
 Access the settings dialog to personalize your timer experience:
 
-![Settings Dialog Light Mode](/home/ubuntu/screenshots/localhost_5173_165000.png)
+![Settings Dialog Light Mode](screenshots/settings-dialog-light.png)
 
 **Available Options:**
 - **Show Hundredths**: Toggle .XX precision for precise timing
@@ -133,10 +133,10 @@ Access the settings dialog to personalize your timer experience:
 ### 🎨 Theme Switching in Action
 
 **Dark Mode** - Perfect for low-light environments, stage presentations, and reducing eye strain:
-![Dark Mode Interface](/home/ubuntu/screenshots/localhost_5173_164910.png)
+![Dark Mode Interface](screenshots/dark-mode-countdown.png)
 
 **Light Mode** - Ideal for bright rooms, projector displays, and high-contrast needs:
-![Light Mode Interface](/home/ubuntu/screenshots/localhost_5173_164947.png)
+![Light Mode Interface](screenshots/light-mode-time-of-day.png)
 
 ### 🚀 Real-World Scenarios
 
